@@ -43,7 +43,6 @@ with st.sidebar:
 
   change = st.checkbox("Hacer que fill sea igual a stroke")
 
-  last_color = "#000000"
 
   if change:
     last_color = fill_color
@@ -51,6 +50,8 @@ with st.sidebar:
   else:
     fill_color = last_color
     fill_color = st.color_picker("Selecciona el color de relleno", "#000000")
+
+  last_color = "#000000"
   
   bg_color = st.color_picker("Selecciona el color del fondo", "#FFFFFF")
 
