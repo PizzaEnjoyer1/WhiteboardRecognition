@@ -41,9 +41,15 @@ with st.sidebar:
 
   stroke_color = st.color_picker("Selecciona el color de linea", "#000000")
 
-  fill_color = st.color_picker("Selecciona el color de relleno", "#000000")
+  if st.button("Hacer que fill sea igual a stroke"):
+    fill_color = stroke_color
+  else:
+    fill_color = st.color_picker("Selecciona el color de relleno", "#000000")
   
   bg_color = st.color_picker("Selecciona el color del fondo", "#FFFFFF")
+
+
+      
 st.subheader("Dibuja el boceto en el panel  y presiona el botón para analizarla")
 
 
