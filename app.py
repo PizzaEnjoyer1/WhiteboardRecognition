@@ -55,7 +55,8 @@ with st.sidebar:
   bg_color = st.color_picker("Selecciona el color del fondo", "#FFFFFF")
 
 
-      
+prompt = st.text_input("Escribe lo que quieras saber de la imagen")
+
 st.subheader("Dibuja el boceto en el panel  y presiona el botón para analizarla")
 
 
