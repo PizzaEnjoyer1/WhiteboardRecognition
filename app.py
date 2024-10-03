@@ -43,6 +43,8 @@ with st.sidebar:
 
   change = st.checkbox("Hacer que fill sea igual a stroke")
 
+  last_color = "#000000"
+
   if change:
     last_color = fill_color
     fill_color = stroke_color
