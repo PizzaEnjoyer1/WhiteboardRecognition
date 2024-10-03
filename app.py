@@ -28,8 +28,22 @@ def encode_image_to_base64(image_path):
 st.set_page_config(page_title='Tablero Inteligente')
 st.title('Tablero Inteligente')
 with st.sidebar:
-    st.subheader("Acerca de:")
-    st.subheader("En esta aplicación veremos la capacidad que ahora tiene una máquina de interpretar un boceto")
+
+  st.title("Cambia los parámetros de tu canvas")
+  
+  drawing_mode = st.selectbox(
+    "Selecciona el modo de dibujo",
+    ("freedraw", "line", "transform", "rect", "circle")
+  )
+
+
+  stroke_width = st.slider("Grosor del pincel", 1, 100, 10)
+
+  stroke_color = st.color_picker("Selecciona el color de linea", "#000000")
+
+  fill_color = st.color_picker("Selecciona el color de relleno", "#000000")
+  
+  bg_color = st.color_picker("Selecciona el color del fondo", "#FFFFFF")
 st.subheader("Dibuja el boceto en el panel  y presiona el botón para analizarla")
 
 # Add canvas component
